@@ -5,9 +5,9 @@ name: tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test_coverage ]
   pull_request:
-    branches: [ main ]
+    branches: [ test_coverage ]
 
 jobs:
   build:

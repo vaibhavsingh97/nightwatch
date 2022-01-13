@@ -28,6 +28,7 @@ jobs:
     - run: npm ci
     - run: npm run eslint
     - run: npm run mocha-coverage
+    - run: npm run text-lcov-coverage
     - run: npm run coverage
 
     - name: Upload coverage to Codecov

@@ -19,8 +19,8 @@ jobs:
       - name: Get modified files
         id: modified-files
         run: |
-          echo $(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF types/)
-          echo "modified=$(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF types/)" >> "$GITHUB_OUTPUT"
+          echo $(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF types/ | | tr '\n' ',')
+          echo "modified=$(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF types/ | tr '\n' ',')" >> "$GITHUB_OUTPUT"
       
       - name: Comment on PR
         if: steps.modified-files.outputs.modified == ''

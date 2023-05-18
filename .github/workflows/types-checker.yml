@@ -19,9 +19,9 @@ jobs:
       - name: Get modified files
         id: modified-files
         run: |
-          echo $(git diff --name-only HEAD^ types/)
-          echo $(git diff --name-only origin/HEAD types/)
-          echo $(git diff --name-only main types/)
+          echo $(git diff --name-only HEAD^)
+          echo $(git diff --name-only origin/HEAD)
+          echo $(git diff --name-only main)
           echo "::set-output name=modified::$(git diff --name-only HEAD^ types/)"
       
       - name: Comment on PR

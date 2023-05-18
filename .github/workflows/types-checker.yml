@@ -19,6 +19,7 @@ jobs:
       - name: Get modified files
         id: modified-files
         run: |
+          echo $(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF types/)
           echo "modified=$(git diff --name-only origin/$GITHUB_BASE_REF origin/$GITHUB_HEAD_REF)" >> "$GITHUB_OUTPUT"
       
       - name: Comment on PR

@@ -15,7 +15,7 @@
 //                 Priyansh Garg <https://github.com/garg3133>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 4.5
-// Nightwatch Version: 3.0.1
+// Nightwatch Version: 3.0.0
 
 import {Protocol} from 'devtools-protocol';
 import {expect as chaiExpect} from 'chai';

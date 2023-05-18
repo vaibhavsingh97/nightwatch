@@ -1,6 +1,7 @@
 import { NightwatchAPI } from './index';
 
 /**
+ * "TODO"
  * @see https://nightwatchjs.org/guide/concepts/test-globals.html#external-test-globals
  */
 export interface NightwatchGlobals {

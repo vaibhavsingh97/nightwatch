@@ -21,7 +21,7 @@ jobs:
         run: |
           echo $GITHUB_HEAD_REF
           echo $GITHUB_BASE_REF
-          echo $(git diff --name-only origin/$GITHUB_HEAD_REF)
+          echo $(git diff --name-only origin/$GITHUB_HEAD_REF..$GITHUB_HEAD_REF)
           echo "::set-output name=modified::$(git diff --name-only HEAD^ types/)"
       
       - name: Comment on PR
